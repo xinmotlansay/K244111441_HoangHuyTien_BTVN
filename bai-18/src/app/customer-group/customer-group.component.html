@@ -1,0 +1,27 @@
+<ng-container *ngIf="view$ | async as view">
+  <p *ngIf="view.loading" role="status">Đang tải danh sách khách hàng...</p>
+  <p *ngIf="view.error" role="alert">{{ view.error }}</p>
+  <table *ngIf="!view.loading && !view.error" border="1" aria-label="Danh sách khách hàng theo nhóm">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Age</th>
+        <th scope="col">#</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let group of view.groups">
+      <tr>
+        <td colspan="5">{{ group.CustomerTypeId }} - {{ group.CustomerTypeName }}</td>
+      </tr>
+      <tr *ngFor="let customer of group.Customers">
+        <td>{{ customer.Id }}</td>
+        <td>{{ customer.Name }}</td>
+        <td>{{ customer.Email }}</td>
+        <td>{{ customer.Age }}</td>
+        <td><img [src]="customer.Image" [alt]="customer.Name" width="180" height="160"></td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>

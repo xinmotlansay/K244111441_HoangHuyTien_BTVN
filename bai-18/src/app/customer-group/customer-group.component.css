@@ -1,0 +1,17 @@
+table {
+  border-spacing: 2px;
+}
+
+th, td {
+  padding: 1px;
+  vertical-align: middle;
+}
+
+td { white-space: nowrap; }
+
+img {
+  display: block;
+  width: 180px;
+  height: 160px;
+  object-fit: cover;
+}

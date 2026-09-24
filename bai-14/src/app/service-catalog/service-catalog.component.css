@@ -1,0 +1,20 @@
+:host { display: block; }
+
+table { border-spacing: 2px; }
+
+.catalog-table { width: 390px; }
+
+.catalog-table > thead > tr > td { width: 50%; }
+
+.product-table { width: 100%; }
+
+td { padding: 1px; }
+
+.product-table thead td { white-space: nowrap; }
+
+img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}

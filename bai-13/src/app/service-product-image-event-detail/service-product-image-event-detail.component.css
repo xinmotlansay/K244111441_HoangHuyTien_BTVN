@@ -1,0 +1,6 @@
+.product-detail { border: 2px solid black; width: 300px; padding: 24px 16px; }
+button { font: inherit; margin-bottom: 8px; }
+table { width: 100%; }
+td { padding: 6px 4px; }
+td:first-child { width: 50%; }
+img { display: block; width: 280px; height: 280px; object-fit: contain; margin: 8px auto 0; }

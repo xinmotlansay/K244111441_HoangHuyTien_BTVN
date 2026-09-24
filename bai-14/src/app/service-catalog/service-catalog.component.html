@@ -1,0 +1,36 @@
+<table border="1" class="catalog-table">
+  <thead>
+    <tr>
+      <td>Ma Danh Muc</td>
+      <td>Ten Danh Muc</td>
+    </tr>
+  </thead>
+  <tbody *ngFor="let category of categories">
+    <tr>
+      <td>{{ category.Cateid }}</td>
+      <td>{{ category.CateName }}</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table border="1" class="product-table">
+          <thead>
+            <tr>
+              <td>Ma San Pham</td>
+              <td>Ten San Pham</td>
+              <td>Gia San Pham</td>
+              <td>Picture</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of category.Products">
+              <td>{{ product.ProductId }}</td>
+              <td>{{ product.ProductName }}</td>
+              <td>{{ product.Price }}</td>
+              <td><img [src]="product.Image" [alt]="product.ProductName"></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

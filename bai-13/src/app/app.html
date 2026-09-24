@@ -1,0 +1,2 @@
+<app-service-product-image-event *ngIf="showProducts"></app-service-product-image-event>
+<router-outlet (activate)="showProducts = false" (deactivate)="showProducts = true"></router-outlet>
